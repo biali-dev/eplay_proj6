@@ -2,26 +2,9 @@ import { useState } from 'react'
 import Section from '../Section'
 import { GalleryItem } from '../../pages/Home'
 import { Items, Item, Action, Modal, ModalContent } from './styles'
-import zelda from '../../assets/images/zelda.png'
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
 import fechar from '../../assets/images/fechar.png'
-
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: zelda
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/1O6Qstncpnc?si=AD9Wpp8BFQkxt_up'
-  }
-]
 
 type Props = {
   defaultCover: string
@@ -39,8 +22,8 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
     type: 'image',
     url: ''
   })
-  const [modalEsteAberto, setModalEstaAberto] = useState(false)
-  const [modalUrl, setModalUrl] = useState('')
+  // const [modalEsteAberto, setModalEstaAberto] = useState(false)
+  // const [modalUrl, setModalUrl] = useState('')
 
   const getMediaCover = (item: GalleryItem) => {
     if (item.type === 'image') return item.url
